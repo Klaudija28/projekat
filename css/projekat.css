@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color:lightblue;
+    color: #333;
+    flex-direction:column;
+    min-height: 100vh;
+    display: flex;  
+}
+header {
+    background: #0d1b2a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00b4d8;
+}
+.hero {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: white;
+    color: #0077b6;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0d1b2a;
+    color: white;
+}
+.kartice {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.kartica {
+    background:white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.kartica:hover {
+    transform: scale(1.05);
+}
+.kontent {
+    padding: 40px;
+    text-align: center;
+}
+.lista{
+    list-style-type: circle black;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 20px auto;
+}
+.destinacije {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.destinacija-kartice {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.destinacija-kartica {
+    background-color: #ffffff;
+    max-width: 300px; 
+    flex: 1 1 280px;         
+    border-radius: 12px;
+    overflow: hidden;    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    background-image: url("/slike/paris.jpg");
+    background-image: url("slike/maldivi.jpg");
+    background-image: url("slike/alpi.jpg");
+}
+
+.destinacija-kartica:hover {
+    transform: translateY(-8px);
+}
+
+.destinacija-kartica img {
+    width: 100%;          
+    height: 200px;        
+    object-fit: cover;
+}
+
+.destinacija-kontent {
+    padding: 20px;
+}
+
+.destinacija-kontent h3 {
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+.destinacija-kontent p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.kontakt-forma {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+    padding: 10px;
+}
+
+.kontakt-forma button {
+    background: #0077b6;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.kontakt-forma button:hover {
+    background: #0d1b2a;
+}
+footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top:auto;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .destinacija-kartica img {
+        height:180px;
+    }
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+ }
