@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /slike/
+
+Sitemap: https://klaudija28.github.io/projekat/sitemap.xml
