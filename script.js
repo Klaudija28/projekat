@@ -7,19 +7,17 @@ function brojDestinacija(niz) {
 function porukaPutovanja(ime) {
     return "Hvala na poruci, " + ime + "! Javićemo vam se uskoro.";
 }
-
 let kartice = document.querySelectorAll(".destinacija-kartica");
 
-for (let i = 0; i < kartice.length; i++) {
-    kartice[i].addEventListener("mouseover", function () {
-        kartice[i].style.backgroundColor = "#e0f7ff";
+kartice.forEach(function (kartica) {
+    kartica.addEventListener("mouseover", function () {
+        kartica.style.backgroundColor = "#e0f7ff";
     });
 
-    kartice[i].addEventListener("mouseout", function () {
-        kartice[i].style.backgroundColor = "white";
+    kartica.addEventListener("mouseout", function () {
+        kartica.style.backgroundColor = "white";
     });
-}
-
+});
 let forma = document.querySelector(".kontakt-forma");
 
 if (forma) {
@@ -48,11 +46,6 @@ let gradovi = ["Pariz", "Maldivi", "Alpi"];
 let velikaSlova = gradovi.map(function(g){
     return g.toUpperCase();
 });
-
-let filtrirani = gradovi.filter(function(g){
-    return g.length > 4;
-});
-
 let naslov = document.querySelector(".destinacije h2");
 
 if(naslov){
@@ -69,7 +62,4 @@ if(naslov){
         document.querySelector(".destinacije").appendChild(novaLista);
     });
 }
-
 let tekst = "SkyTravel";
-let mali = tekst.toLowerCase();
-let deo = tekst.substring(0,3);
